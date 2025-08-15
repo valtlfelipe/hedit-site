@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hedit Design System - Dark developer theme with purple gradients */
+
+@layer base {
+  :root {
+    /* Dark theme base colors */
+    --background: 240 10% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 240 8% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 240 8% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Primary purple gradient matching logo */
+    --primary: 270 60% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 280 70% 70%;
+
+    /* Secondary with subtle purple tint */
+    --secondary: 240 15% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Muted colors for subtle elements */
+    --muted: 240 10% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    /* Accent colors */
+    --accent: 260 50% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 15% 20%;
+    --input: 240 15% 20%;
+    --ring: 270 60% 60%;
+
+    --radius: 0.75rem;
+
+    /* Code syntax highlighting */
+    --code-bg: 240 8% 10%;
+    --code-comment: 120 50% 60%;
+    --code-keyword: 200 80% 70%;
+    --code-string: 60 80% 70%;
+    --code-number: 320 80% 70%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(270 60% 60%), hsl(320 60% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(240 8% 12%), hsl(240 15% 18%));
+    --gradient-glow: linear-gradient(135deg, hsl(270 60% 60% / 0.2), hsl(320 60% 65% / 0.2));
+
+    /* Shadows and effects */
+    --shadow-glow: 0 0 50px hsl(270 60% 60% / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(240 10% 4% / 0.8);
+    --shadow-elegant: 0 20px 60px -20px hsl(270 60% 60% / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
