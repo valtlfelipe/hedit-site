@@ -9,10 +9,10 @@
 	"compatibility_date": "2025-08-13",
 	"assets": {
 		"not_found_handling": "single-page-application",
-		"directory": "./public/"
+		"directory": "./dist/"
 	},
 	"observability": {
-		"enabled": true
+		"enabled": false
 	}
 	/**
 	 * Smart Placement
