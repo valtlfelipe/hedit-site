@@ -23,7 +23,7 @@ const PricingPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl w-full p-4">
           <Card className="flex flex-col">
             <CardHeader>
-              <CardTitle>Free</CardTitle>
+              <CardTitle>Personal</CardTitle>
               <CardDescription>For personal use</CardDescription>
             </CardHeader>
             <CardContent className="flex-grow">
@@ -78,6 +78,9 @@ const PricingPage = () => {
             </CardFooter>
           </Card>
         </div>
+        <p className="mt-8 text-sm text-center text-muted-foreground max-w-2xl px-4">
+          For bulk purchases and other inquiries, contact hello@hedit.app.
+        </p>
       </main>
       <Footer />
     </div>
