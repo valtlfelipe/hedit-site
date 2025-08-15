@@ -20,6 +20,24 @@ const PricingPage = () => {
             Support ongoing development with a commercial license.
           </p>
         </div>
+
+        {/* Early Adopters Banner - Refined Card Style */}
+        <div className="max-w-4xl w-full mx-auto mb-8">
+          <div className="relative rounded-2xl shadow-xl overflow-hidden border border-primary/30 bg-gradient-to-br from-primary/20 via-background to-secondary/30 px-8 py-7 flex items-center gap-6 backdrop-blur-md">
+            <div className="flex items-center justify-center h-14 w-14 rounded-full bg-gradient-to-tr from-primary to-secondary shadow-md">
+              <span className="text-3xl">🎉</span>
+            </div>
+            <div className="flex-1">
+              <div className="text-2xl font-extrabold text-primary mb-1 drop-shadow">Early Adopters Special</div>
+              <div className="text-md text-muted-foreground mb-3">Support the development and get <span className="font-bold text-primary">50% off</span> your first year!</div>
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-medium text-muted-foreground">Use coupon:</span>
+                <span className="text-sm font-bold px-4 py-1 rounded-full bg-primary/80 text-white">HELAUNCH</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl w-full p-4">
           <Card className="flex flex-col">
             <CardHeader>
