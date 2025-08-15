@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 
 const PricingPage = () => {
   return (
@@ -43,7 +44,9 @@ const PricingPage = () => {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button className="w-full">Download Now</Button>
+              <Button className="w-full" asChild>
+                <Link to="/download">Download Now</Link>
+              </Button>
             </CardFooter>
           </Card>
           <Card className="flex flex-col border-primary">
@@ -69,7 +72,9 @@ const PricingPage = () => {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button className="w-full">Buy Now</Button>
+              <Button className="w-full" asChild>
+                <a href="https://www.creem.io/payment/prod_7UiSIBPjvS5GxHahFnq2U2">Buy Now</a>
+              </Button>
             </CardFooter>
           </Card>
         </div>
