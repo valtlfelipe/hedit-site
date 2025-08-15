@@ -19,10 +19,6 @@ const Footer = () => {
             <p className="text-muted-foreground">
               The modern hosts file editor for people who care about their tools.
             </p>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Heart className="w-4 h-4 text-red-500 fill-red-500" />
-              <span>Made with love</span>
-            </div>
           </div>
 
           {/* Product */}
@@ -59,20 +55,15 @@ const Footer = () => {
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 mt-8 border-t border-border">
           <p className="text-sm text-muted-foreground">
-            © 2025 Hedit - FVM Tec.. All rights reserved.
+            © 2025 Hedit - FVM Tec. All rights reserved.
           </p>
 
-          {/* <div className="flex items-center gap-4 mt-4 md:mt-0">
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Github className="w-5 h-5" />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Mail className="w-5 h-5" />
-            </a>
-          </div> */}
+          <div className="flex items-center gap-4 mt-4 md:mt-0">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Heart className="w-4 h-4 text-red-500 fill-red-500" />
+              <span>Made with love in 🇧🇷</span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
