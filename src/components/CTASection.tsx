@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Download, Github, Heart } from "lucide-react";
+import { Download,  Heart, HeartHandshake } from "lucide-react";
 
 const CTASection = () => {
   return (
@@ -32,14 +32,14 @@ const CTASection = () => {
                   Download Hedit
                 </Button>
                 </a>
-                <a href="https://github.com/valtlfelipe/hedit" target="_blank">
+              <a href="https://github.com/valtlfelipe/hedit/issues/new" target="_blank">
                 <Button
                   variant="outline"
                   size="lg"
                   className="border-border hover:bg-secondary px-8 py-6 text-lg"
                 >
-                  <Github className="w-5 h-5 mr-2" />
-                  View on GitHub
+                  <HeartHandshake className="w-5 h-5 mr-2" />
+                  Share Feedback
                 </Button>
                 </a>
             </div>
