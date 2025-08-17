@@ -5,12 +5,10 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Download, Apple, Monitor, Terminal } from 'lucide-react';
-
-// This is a placeholder. I will ask the user for the correct repository URL.
-const GITHUB_REPO = 'valtlfelipe/hedit';
+import { createFileRoute } from '@tanstack/react-router'
 
 const fetchLatestRelease = async () => {
-  const response = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/releases/latest`);
+  const response = await fetch(`https://api.github.com/repos/valtlfelipe/hedit/releases/latest`);
   if (!response.ok) {
     throw new Error('Network response was not ok');
   }
@@ -33,8 +31,9 @@ const useOperatingSystem = () => {
 };
 
 const DownloadPage = () => {
-  const { data: release, isLoading, isError } = useQuery({ queryKey: ['latestRelease'], queryFn: fetchLatestRelease });
+  // const { data: release, isLoading, isError } = useQuery({ queryKey: ['latestRelease'], queryFn: fetchLatestRelease });
   const detectedOS = useOperatingSystem();
+  const release = Route.useLoaderData()
 
   const getAssetUrl = (name: string) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -68,8 +67,8 @@ const DownloadPage = () => {
       <main className="flex flex-col items-center justify-center py-24 sm:py-32">
         <div className="text-center mb-8 px-4">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Download Hedit</h1>
-          {isLoading && <p className="mt-3 text-lg text-muted-foreground sm:mt-4">Fetching latest version...</p>}
-          {isError && <p className="mt-3 text-lg text-red-500 sm:mt-4">Could not fetch release information. Please try again later.</p>}
+          {/* {isLoading && <p className="mt-3 text-lg text-muted-foreground sm:mt-4">Fetching latest version...</p>}
+          {isError && <p className="mt-3 text-lg text-red-500 sm:mt-4">Could not fetch release information. Please try again later.</p>} */}
           {release && (
             <>
               <p className="mt-3 text-lg text-muted-foreground sm:mt-4">
@@ -94,4 +93,7 @@ const DownloadPage = () => {
   );
 };
 
-export default DownloadPage;
+export const Route = createFileRoute('/download')({
+  loader: () => fetchLatestRelease(),
+  component: DownloadPage,
+})
