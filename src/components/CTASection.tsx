@@ -32,7 +32,7 @@ const CTASection = () => {
                   Download Hedit
                 </Button>
                 </a>
-              <a href="https://github.com/valtlfelipe/hedit/issues/new" target="_blank">
+              <a href="https://github.com/valtlfelipe/hedit/issues/new/choose" target="_blank">
                 <Button
                   variant="outline"
                   size="lg"

@@ -26,7 +26,7 @@ const Header = () => {
             <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">
               Pricing
             </Link>
-            <a href="https://github.com/valtlfelipe/hedit/issues/new" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors flex items-center">
+            <a href="https://github.com/valtlfelipe/hedit/issues/new/choose" target="_blank" className="text-muted-foreground hover:text-foreground transition-colors flex items-center">
               Feedback
               <ExternalLink className="w-4 h-4 ml-1" />
             </a>
