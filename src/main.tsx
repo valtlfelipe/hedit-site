@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 import { routeTree } from './routeTree.gen'
 import './index.css'
+import NotFound from './pages/NotFound'
 
 // Create a new router instance
 const router = createRouter({
@@ -10,7 +11,7 @@ const router = createRouter({
     defaultPreload: 'intent',
     defaultStaleTime: 5000,
     scrollRestoration: true,
-    // defaultNotFoundComponent
+    defaultNotFoundComponent: NotFound
 })
 
 // Register the router instance for type safety
